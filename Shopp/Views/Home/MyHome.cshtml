@@ -1,0 +1,12 @@
+﻿@model HomeViewModel
+<div style="margin-top:70px">
+    <h1>Улюблені</h1>
+        <div class="row mt-5 mb-2">
+    @{
+        foreach (Flower fl in Model.favFlower)
+        {
+            @Html.Partial("AllFlowers", fl)
+        }
+    }
+    </div>
+</div>

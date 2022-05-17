@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bgdark" style="background-color:#292928;">
+            <div class="container-fluid">
+                <a class="nav-link active" href="/Flowers/List" style="color:white; font-size:19px;">Рослини</a>
+                <button class="navbar-toggler" type="button" data-bstoggle="collapse" data-bs-target="#navbarCollapse" ariacontrols="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Home/MyHome">Головна</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Flowers/List">Усі рослини</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Flowers/List/house">Домашні</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Flowers/List/garden">Садові</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/ShopCart/Bucket">Кошик</a>
+                        </li>
+                        @{
+                            @Html.Partial("Reg");
+                        }
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success"type="submit"> Пошук </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        @RenderBody()
+    </div>
+    <footer class="container mt-5">
+        <p class="float-right"><a href="#">Back to top</a></p>
+        <p>© 2022 Всі права захищені· <a href="#">Угода</a></p>
+    </footer>
+    <script src="~/js/bootstrap.min.js"></script>
+</body>
+</html>

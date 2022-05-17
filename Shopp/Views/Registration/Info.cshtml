@@ -1,0 +1,19 @@
+﻿@model User
+@foreach (User u in Shopp.Data.Repository.UserRepository.users)
+{
+    @if (Shopp.Data.Models.User.getRMail().Equals(u.email))
+    {
+        <div style="margin-top:180px;">
+            <p> Унікальний номер:  @u.id</p>
+            <p> Ім'я: @u.name</p>
+            <p> Пароль: @u.password</p>
+            <p> Електрона скринька: @u.email</p>
+            <p> Адреса для доставки: @u.address</p>
+            <p> Мобільний телефон: @u.phone</p>
+            
+
+        </div>
+        <a class="btn btn-danger m-5" asp-controller="Registration" asp-action="Exit" type="submit" style="margin-top:250px"> Вийти </a>
+    }
+}
+

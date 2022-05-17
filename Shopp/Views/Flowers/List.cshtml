@@ -1,0 +1,10 @@
+﻿@model FlowersListViewModels
+<div style="margin-top:70px">
+    <h1>Всі квіти</h1>
+    <div class="row mt-5 mb-2">
+        @{
+            foreach(Flower fl in Model.allFlowers)
+            @Html.Partial("AllFlowers",fl);
+        }
+    </div>
+</div>

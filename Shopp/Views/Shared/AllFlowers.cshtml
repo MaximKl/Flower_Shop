@@ -1,0 +1,13 @@
+﻿@model Flower
+@{
+    <div class="col-lg-4">
+        <h2>Вид: @Model.Category.categoryName </h2>
+        <div style="block-size:370px;">
+            <img src="@Model.img" alt="@Model.name" style="min-width:300px; max-width:320px;height:350px;" />
+        </div>
+        <h2>Назва: @Model.name</h2>
+        <p>Опис: @Model.shortDesc </p>
+        <p>Ціна: @Model.price.ToString("c")</p>
+        <p><a class="btn btn-warning" asp-controller="ShopCart" asp-action="AddToCart" asp-route-id="@Model.id">Додати до корзини</a></p>
+    </div>
+}

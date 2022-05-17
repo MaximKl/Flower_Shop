@@ -1,0 +1,12 @@
+﻿@if (Shopp.Controllers.RegistrationController.isEqual==0)
+{
+    <h1 style="margin-top:100px;">Такий користувач вже існує (</h1>
+}
+else if(Shopp.Controllers.RegistrationController.isEqual==1)
+{
+     <h1 style="margin-top:100px;">Паролі не співпали (</h1>
+}
+else if(Shopp.Controllers.RegistrationController.isEqual==2)
+{
+     <h1 style="margin-top:100px;">Невірний пароль (</h1>
+}

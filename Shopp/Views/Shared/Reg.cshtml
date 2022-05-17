@@ -1,0 +1,15 @@
+﻿    @if (Shopp.Data.Models.User.getRMail() != null)
+    {
+    <li class="nav-item" style="margin-left:700px;">
+        <a class="nav-link" href="/Registration/Info">@{string st=Shopp.Data.Models.User.getRMail();} @st </a>
+        </li>
+    }
+    else
+    {
+        <li class="nav-item" style="margin-left:800px;">
+            <a class="nav-link" href="/Registration/User">Реєстрація</a>
+        </li>
+        <li class="nav-item" style="margin-left:50px;">
+            <a class="nav-link" href="/Registration/Sign">Увійти</a>
+        </li>
+    }
